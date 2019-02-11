@@ -8,7 +8,8 @@
 .DS_Store/
 
 npm-debug.log
-
+.idea
+dist/
 node_modules/
 typings/
 
