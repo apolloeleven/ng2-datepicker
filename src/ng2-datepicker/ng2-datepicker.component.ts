@@ -304,8 +304,8 @@ export class DatePickerComponent implements ControlValueAccessor, OnInit {
   }
 
   generateYears() {
-    let date: moment.Moment = this.minDate || Moment().year(Moment().year() - 40);
-    let toDate: moment.Moment = this.maxDate || Moment().year(Moment().year() + 40);
+    let date: moment.Moment = (this.minDate ? this.minDate.clone() : null) || Moment().year(Moment().year() - 40);
+    let toDate: moment.Moment = (this.maxDate ? this.maxDate.clone() : null) || Moment().year(Moment().year() + 40);
     let years = toDate.year() - date.year();
 
     for (let i = 0; i < years; i++) {
